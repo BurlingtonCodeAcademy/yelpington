@@ -1,6 +1,6 @@
 # Manhattan Pizza & Pub
 
-## Address: ## 167 Main St, Burlington, VT 05401
+## Address: 167 Main St, Burlington, VT 05401
 
 *Hours:* 
 _Friday  	11:30AM–2AM
