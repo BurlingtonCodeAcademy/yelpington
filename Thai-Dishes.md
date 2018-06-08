@@ -1,4 +1,4 @@
 # Thai Dishes
 
 
-**Address161**  161 Church St Burlington, VT 05401
+**Address**  161 Church St Burlington, VT 05401
