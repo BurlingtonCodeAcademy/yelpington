@@ -1,4 +1,4 @@
-# Alhi Baba's Kabob Shop
+# Ahli Baba's Kabob Shop
 
 **Address:** 163 Main street
 
