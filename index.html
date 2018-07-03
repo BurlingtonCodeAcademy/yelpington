@@ -1,22 +1,52 @@
 <!DOCTYPE html>
-<head></head>
+<html>
+<head>
+
+</head>
 
 <body>
+  <h1 id="name"></h1>
+  <ul>
+    <li id="address"></li>
+    <li id="phone number"></li>
+    <li id="hours"></li>
+    <li id="notes"></li>
+    <li id="notes1"></li>
+    <li id="notes2"></li>
+  </ul>
+  <div id="map">
+
+  </div>
 
 </body>
 
 <script>
 
-let params = new URLSearchParams(document.location.search.slice(1));
-let name = params.get("name");
-
-
-fetch('splash-at-the-boathouse.json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(restaurantInfo) {
+    let params = new URLSearchParams(document.location.search.slice(1));
+    let name = params.get("name");
     
-  });
+    
+    fetch(name + '.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(restaurantInfo) {
+        document.getElementById('name').textContent = restaurantInfo.name;
+        document.getElementById('address').textContent = restaurantInfo.address;
+        document.getElementById('phone number').textContent = restaurantInfo["phone number"];
+        document.getElementById('hours').textContent = restaurantInfo.hours;
+        document.getElementById('notes').textContent = restaurantInfo.notes[0];
+        document.getElementById('notes1').textContent = restaurantInfo.notes[1];
+        document.getElementById('notes2').textContent = restaurantInfo.notes[2];
+      })
+      .catch(function(error) {
+        console.error('Yikes! I should handle this better:\n', error);
+      });
 
-</script>
+
+    
+    </script>
+
+</html>
+
+
