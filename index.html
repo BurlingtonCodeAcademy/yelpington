@@ -1,15 +1,22 @@
-<script>
-fetch('city-market.md')
-  .then(function(response) {
-    response.text().then((s) => console.log(s));
-  });
+<!DOCTYPE html>
+<head></head>
 
-fetch('city-market.md')
+<body>
+
+</body>
+
+<script>
+
+let params = new URLSearchParams(document.location.search.slice(1));
+let name = params.get("name");
+
+
+fetch('splash-at-the-boathouse.json')
   .then(function(response) {
-    return response.text();
+    return response.json();
   })
-  .then(function(myText) {
-    console.log(myText);
+  .then(function(restaurantInfo) {
+    
   });
 
 </script>
