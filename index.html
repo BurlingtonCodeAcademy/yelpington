@@ -1,11 +1,65 @@
-<script>
+<!DOCTYPE html>
+<html>
 
-fetch('city-market.md')
-  .then(function(response) {
-    return response.text();
-  })
-  .then(function(myText) {
-    console.log(myText);
-  });
+<head>
+  <link rel="stylesheet" href="muddy-waters.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <style>
+  </style>
 
-</script>
+</head>
+
+
+<body>
+  <div id="mainText">
+    <h1 id="name"></h1>
+    <h2 id="address"></h2>
+    <h3 id="phoneNumber"></h3>
+    <h4 id="notes"></h4>
+    <iframe id="boundingbox" width="500px" height="450px">
+    </iframe>
+  </div>
+
+ 
+
+  <script>
+    // Access query parameters: "/?name=muddy-waters", for instance.
+    let params = new URLSearchParams(document.location.search.slice(1));
+    // In this particular case, by using the ID "name" instead of a specific filename, you can put the name of any JSON in the URL and access it - brilliant!
+    let fileName = params.get("name")+".json";
+    console.log(fileName);
+    
+    //fetch().then().then()
+    //the fetch returns a promise. when that promise resolves/finishes, it pass the promise to the .then. the promise can be successful thing or error.
+    fetch(fileName)
+      .then(function (response) {
+        // actually converts string into javascript object.
+        return response.json();//text to object!!
+      })
+      .then(function (myJson) {
+        // telling the DOM exactly where to put a piece from the JS Object. assigning name value to name id.
+        document.getElementById("name").textContent = myJson.name
+        document.getElementById("address").textContent = myJson.address
+        document.getElementById("phoneNumber").textContent = myJson.phonenumber
+        document.getElementById("notes").textContent = myJson.notes
+        
+        let apiUrl = "https://nominatim.openstreetmap.org/search/?q=" + myJson.address
+
+        fetch(apiUrl).then(function(response){
+          let package = response.json();
+          console.log(package);
+
+
+        }) 
+
+
+
+
+        console.log(myJson);
+      });
+  </script>
+
+</body>
+
+
+</html>
