@@ -6,11 +6,7 @@ function Map(props) {
   return (
     <MapContainer
       center={props.center}
-      zoom={8}
-      scrollWheelZoom={false}
-      doubleClickZoom={false}
-      zoomControl={false}
-      touchZoom={false}
+      zoom={13}
       style={{ height: "600px", width: "600px" }}
     >
       <TileLayer
