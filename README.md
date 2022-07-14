@@ -6,7 +6,7 @@ In this project, you will create an online directory of restaraunts in the city 
 
 * React
 * Node with Express
-* Leaflet
+* [React Leaflet]("https://react-leaflet.js.org/docs/start-introduction")
 
 # Stories
 
@@ -14,7 +14,7 @@ In this project, you will create an online directory of restaraunts in the city 
 
 **Given** You are in the top level of your project
 
-**Then** You have a `api` folder that contains JSON data. This data can take whatever shape you desire, but it needs to contain the following key-value pairs:
+**Then** You have an `api` folder that contains JSON data. This data can take whatever shape you desire, but it needs to contain the following key-value pairs:
 
 * ID
 * Name
@@ -76,7 +76,7 @@ In this project, you will create an online directory of restaraunts in the city 
 
 ## IceBox
 
-* Use React Router to dynamically rerender your application.
+* Use React Router and URL Paramaters to dynamically rerender your application.
 
 * Enable a search feature so users can find restaraunts by different properties.
 
