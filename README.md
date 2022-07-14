@@ -6,7 +6,7 @@ In this project, you will create an online directory of restaraunts in the city 
 
 * React
 * Node with Express
-* [React Leaflet]("https://react-leaflet.js.org/docs/start-introduction")
+* [React Leaflet](https://react-leaflet.js.org/docs/start-introduction)
 
 # Stories
 
